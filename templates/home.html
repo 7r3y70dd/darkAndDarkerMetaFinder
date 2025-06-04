@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Class Base Attributes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th><th>Str</th><th>Vig</th><th>Agi</th>
+        <th>Dex</th><th>Will</th><th>Know</th><th>Res</th><th>Base HP</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cls in classes %}
+        <tr>
+          <td>{{ cls.name }}</td>
+          <td>{{ cls.strength }}</td>
+          <td>{{ cls.vigor }}</td>
+          <td>{{ cls.agility }}</td>
+          <td>{{ cls.dexterity }}</td>
+          <td>{{ cls.will }}</td>
+          <td>{{ cls.knowledge }}</td>
+          <td>{{ cls.resourcefulness }}</td>
+          <td>{{ "%.0f"|format(cls.base_hp) }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="9">No data yet — seed the database!</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+

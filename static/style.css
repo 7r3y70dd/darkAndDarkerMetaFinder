@@ -1,0 +1,45 @@
+/* Simple dark-mode styling */
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#151515;
+  color:#e8e8e8;
+}
+
+header{
+  background:#1f1f1f;
+  padding:1rem 2rem;
+  border-bottom:1px solid #333;
+}
+
+nav a{
+  color:#89aaff;
+  margin-right:1rem;
+  text-decoration:none;
+}
+nav a:hover{ text-decoration:underline; }
+
+main{ padding:2rem; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:1rem;
+}
+
+th,td{
+  border:1px solid #333;
+  padding:.5rem;
+  text-align:center;
+}
+
+tr:nth-child(even){ background:#1f1f1f; }
+
+footer{
+  text-align:center;
+  padding:1rem;
+  background:#1f1f1f;
+  border-top:1px solid #333;
+}
+
