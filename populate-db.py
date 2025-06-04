@@ -352,12 +352,20 @@ def populate():
     db.session.commit()
 
     # 2. Perk
-    perk = Perk(
+    Defense_Expert = Perk(
+        name="Defense Expert",
+        class_name="Warrior",
+        bonuses=[{"type": "vigor", "value": 2}]  # list of python dicts.  ADD IS_MULTIPLIER
+    )
+    db.session.add(Defense_Expert)
+
+    Steadfast = Perk(
         name="Steadfast",
         class_name="Warrior",
         bonuses=[{"type": "vigor", "value": 2}]
     )
-    db.session.add(perk)
+    db.session.add(Steadfast)
+
 
     # 3. Skill
     skill = Skill(
